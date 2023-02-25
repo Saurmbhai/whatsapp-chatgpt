@@ -8,15 +8,8 @@ import constants from "./constants";
 import * as cli from "./cli/ui";
 import { handleIncomingMessage } from "./handlers/message";
 //copied code for r10 port error
-const express = require('express')
-const path = require('path')
-const PORT = process.env.PORT || 5000
 
-express()
-  .use(express.static(path.join(__dirname, 'public')))
-  .set('views', path.join(__dirname, 'views'))
-  .set('view engine', 'ejs')
-  .get('/', (req, res) => res.render('pages/index'))
+const PORT = process.env.PORT || 5000
   .listen(PORT, () => console.log(`Listening on ${ PORT }`))
 // Entrypoint
 const start = async () => {
