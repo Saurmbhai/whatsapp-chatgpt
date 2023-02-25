@@ -7,10 +7,7 @@ import constants from "./constants";
 // CLI
 import * as cli from "./cli/ui";
 import { handleIncomingMessage } from "./handlers/message";
-//copied code for r10 port error
 
-const PORT = process.env.PORT || 5000
-  .listen(PORT, () => console.log(`Listening on ${ PORT }`))
 // Entrypoint
 const start = async () => {
 	cli.printIntro();
